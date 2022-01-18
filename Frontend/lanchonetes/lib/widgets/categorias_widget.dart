@@ -52,30 +52,30 @@ class CategoriasWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<CategoriaModel>>(
-        future: repository.fetchCategorias(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.done &&
-              snapshot.hasData) {
-            return _buildListaCategorias(snapshot.data!);
-          }
-          if (snapshot.hasError) {
-            return const Center(
-              child: Text(
-                'Erro ao buscar categorias!',
-                style:
-                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
-              ),
-            );
-          }
+      future: repository.fetchCategorias(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.done &&
+            snapshot.hasData) {
+          return _buildListaCategorias(snapshot.data!);
+        }
+        if (snapshot.hasError) {
           return const Center(
-            child: CircularProgressIndicator(),
+            child: Text(
+              'Erro ao buscar categorias!',
+              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+            ),
           );
-        });
+        }
+        return const Center(
+          child: CircularProgressIndicator(),
+        );
+      },
+    );
   }
 
   GridView _buildListaCategorias(List<CategoriaModel> lista) {
     return GridView.builder(
-      itemCount: 5,
+      itemCount: lista.length,
       gridDelegate:
           const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
       itemBuilder: (context, index) {
