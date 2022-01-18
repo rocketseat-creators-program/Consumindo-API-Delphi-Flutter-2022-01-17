@@ -1,22 +1,26 @@
-<img src="https://storage.googleapis.com/golden-wind/experts-club/capa-github.svg" />
+<img src="https://i.imgur.com/XSFK6Br.png" />
 
-# Título
+# Consumindo uma API feita em Delphi com Flutter
 
-Introdução ao seu projeto. Apresentado por [Seu nome][1].
+Neste projeto é apresentado como desenvolver duas aplicações, um backend API Rest servindo arquivos estáticos com Delphi criadas com o Framework Web [Horse][3] e um frontend consumindo esta API feito usando o [Flutter][2].  
+Neste repositório estão os dois projetos, na pasta server está o backend feito com [Delphi][4] e na pasta Frontend esta o projeto de lanchonetes desenvolvido com [Flutter][2].
 
-> __Atenção__: Este é o projeto <template/completo>, se você está procurando o projeto de <completo/template>, vá para [este repositório](https://github.com/rocketseat-experts-club/<seu projeto aqui>)
+Apresentado por [Alessandro Dutra de Andrade (Cachopaweb)][1].
 
-## Instalação
-
-1. Use este template
-2. Edite o README.md
-3. Adicione seus arquivos
-
+## Instalação das dependências no [Delphi][4] usando [Boss][5]
+```sh
+cd server
+boss install
+```
 ## Expert
 
-| [<img src="https://github.com/<seu handle>.png" width="75px;"/>][1] |
+| [<img src="https://github.com/cachopaweb.png" width="75px;"/>][1] |
 | :-: |
 |[Creator][1]|
 
 
-[1]: https://seusite.com.br
+[1]: https://github.com/cachopaweb
+[2]: https://flutter.dev/
+[3]: https://github.com/HashLoad/horse
+[4]: https://www.embarcadero.com/br/products/delphi
+[5]: https://github.com/HashLoad/boss
