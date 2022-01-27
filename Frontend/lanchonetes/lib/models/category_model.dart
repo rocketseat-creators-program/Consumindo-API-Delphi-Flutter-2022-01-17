@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-class CategoriaModel {
+class CategoryModel {
   final String nome;
   final String url;
 
-  CategoriaModel({required this.nome, required this.url});
+  CategoryModel({required this.nome, required this.url});
 
   Map<String, dynamic> toMap() {
     return {
@@ -13,8 +13,8 @@ class CategoriaModel {
     };
   }
 
-  factory CategoriaModel.fromMap(Map<String, dynamic> map) {
-    return CategoriaModel(
+  factory CategoryModel.fromMap(Map<String, dynamic> map) {
+    return CategoryModel(
       nome: map['nome'] ?? '',
       url: map['url'] ?? '',
     );
@@ -22,6 +22,6 @@ class CategoriaModel {
 
   String toJson() => json.encode(toMap());
 
-  factory CategoriaModel.fromJson(String source) =>
-      CategoriaModel.fromMap(json.decode(source));
+  factory CategoryModel.fromJson(String source) =>
+      CategoryModel.fromMap(json.decode(source));
 }
